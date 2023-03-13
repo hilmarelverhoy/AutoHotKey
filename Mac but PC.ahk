@@ -44,15 +44,12 @@ CapsLock::						return
 
 !+z::							Send, ^y
 !#Esc::							Send, ^+{Esc}
-!^Space::						Run, charmap.exe ; buggy, be sure to press Command first before pressing Control
 !^f::							Send, {F11}
 <!Tab::							AltTab
 !+3::							Send, ~#{PrintScreen}
 !+4::							Send, ~#+s
 !,::							Send, ^,
 
-!^q::							DllCall("LockWorkStation")
-!+q::							DllCall("ExitWindowsEx")
 
 !#v::							Send, ^!v
 	#IfWinActive ahk_exe explorer.exe
