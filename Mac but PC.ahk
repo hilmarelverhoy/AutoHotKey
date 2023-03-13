@@ -26,13 +26,7 @@
 SetTitleMatchMode 2
 SendMode Input
 
-if !InStr(A_AhkPath, "_UIA.exe") {
-	newPath := RegExReplace(A_AhkPath, "\.exe", "U" (A_Is64bitOS ? 64 : 32) "_UIA.exe")
-	Run % StrReplace(DllCall("Kernel32\GetCommandLine", "Str"), A_AhkPath, newPath)
-	ExitApp
-}
 
-;RegWrite, REG_DWORD, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Policies\System, DisableLockWorkstation, 0
 
 
 ; --------------------------------------------------------------
